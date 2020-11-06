@@ -75,7 +75,7 @@ void write_lef(string filename) {
         getline(lef, str);
         if (str.find("END UNITS") == 0) {
             outlef << str << endl;
-            outlef << "MANUFACTURINGGRID " << "0.005 " << ";";
+            outlef << "MANUFACTURINGGRID " << "0.0005 " << ";";
         } else
             outlef << str << '\n';
     }
