@@ -45,7 +45,7 @@ int main(int argc, char** argv){
     std::cout<<"write def file"<<endl;
     write_def(def_file_path, AreaNum, vec);
     
-    std::out<<"success...";
+    std::cout<<"success...";
     //if use deletePin_function , the file name will change
     //deletePT(exist_def);
 	}
