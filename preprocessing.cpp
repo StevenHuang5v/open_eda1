@@ -168,26 +168,26 @@ void write_def(string filename, int AreaNum, vector<string>& vec_list) {
             }
         } else if (hasEnding(str, "SIGNAL") == 1) {
             if(pinx < AreaNum && piny == AreaNum) {
-                outdef << str << " + " << "LAYER" << " METAL" << vec_list.size() << " (-140 0) (140 280)" << " + "
+                outdef << str << " + " << "LAYER " << vec_list[vec_list.size()-1] << " (-140 0) (140 280)" << " + "
                        << "FIXED" << " ( " << pinx << " " << piny << " ) " << "S" << endl;
                 pinx += 5000;
             }
             else if (piny > 0 && (AreaNum-5000<pinx<AreaNum+5000)) {
                 pinx = AreaNum;
                 piny -= 5000;
-                outdef << str << " + " << "LAYER" << " METAL" << vec_list.size() << " (-140 0) (140 280)" << " + "
+                outdef << str << " + " << "LAYER " << vec_list[vec_list.size()-1] << " (-140 0) (140 280)" << " + "
                        << "FIXED" << " ( " << pinx << " " << piny << " ) " << "S" << endl;
             }
             else if (pinx > 0 && (-5000<piny<5000)){
                 piny = 0;
                 pinx -= 5000;
-                outdef << str << " + " << "LAYER" << " METAL" << vec_list.size() << " (-140 0) (140 280)" << " + "
+                outdef << str << " + " << "LAYER " << vec_list[vec_list.size()-1] << " (-140 0) (140 280)" << " + "
                        << "FIXED" << " ( " << pinx << " " << piny << " ) " << "S" << endl;
             }
             else if (piny < AreaNum) {
                 pinx = 0;
                 piny += 5000;
-                outdef << str << " + " << "LAYER" << " METAL" << vec_list.size() << " (-140 0) (140 280)" << " + "
+                outdef << str << " + " << "LAYER " << vec_list[vec_list.size()-1] << " (-140 0) (140 280)" << " + "
                        << "FIXED" << " ( " << pinx << " " << piny << " ) " << "S" << endl;
             }
             else {
