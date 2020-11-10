@@ -115,7 +115,7 @@ void search_def(string filename) {
 
 void deletePT(string filename){
     ifstream def(filename);
-    ofstream out("delDef.def");
+    ofstream out("out.def");
     string str;
     int idx1, idx2, idx3, idx4, idx5;
     string a;
