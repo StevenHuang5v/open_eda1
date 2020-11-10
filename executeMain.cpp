@@ -44,7 +44,11 @@ int main(int argc, char** argv){
     //write track and pinData
     std::cout<<"write def file"<<endl;
     write_def(def_file_path, AreaNum, vec);
-    
+		
+    //delete pin and track
+    std:cout<<"delete pin"<<endl;
+    deletePT("Add_Def.def");
+		
     std::cout<<"success..."<<endl;
     //if use deletePin_function , the file name will change
     //deletePT(exist_def);
