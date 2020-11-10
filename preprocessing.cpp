@@ -125,13 +125,8 @@ void deletePT(string filename){
         idx1 = str.find("+ LAYER METAL");
         idx2 = str.find("+ FIXED");
         idx3 = str.find("USE SIGNAL");
-        idx4 = str.find("DIEAREA");
-        idx5 = str.find("TRACK");
 
-        if (idx4 != string::npos or idx5 != string::npos){
-            out << "";
-        }
-        else if (idx3 != string::npos){
+        if (idx3 != string::npos){
             for(int i=0; i <= idx3+10; i++){
                 a = a + str[i];
             }
